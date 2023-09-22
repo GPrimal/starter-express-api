@@ -63,8 +63,6 @@ app.get('/getme', (req, res) => {
     res.send("hi") }
     )
 
-app.use(cors(corsOptions))
-
 
     app.listen(port, () => {
         console.log(`server is starting at port ${port}`)
