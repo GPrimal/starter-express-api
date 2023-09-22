@@ -20,10 +20,9 @@ app.get('/getme', (req, res) => {
       const cookieHeaders = cookies.map(cookie => cookie.trim()).join(';');
     
       const fetchOptions = {
-        method: 'GET', // or 'POST', 'PUT', etc. as needed
+        method: 'GET',
         headers: {
-          'Cookie': cookieHeaders, // Include the cookies in the request headers
-          // Other headers if needed
+          'Cookie': cookieHeaders
         },
         // Additional fetch options like body, mode, etc.
       };
@@ -59,7 +58,7 @@ app.get('/getme', (req, res) => {
   });
 
   app.get('/gotcha', (req, res) => {
-    console.log(req)
+    console.log(req.headers)
     res.send("hi") }
     )
 
