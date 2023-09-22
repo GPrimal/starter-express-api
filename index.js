@@ -4,7 +4,7 @@ const port = 3000
 
 
 app.get('/getme', (req, res) => {
-    console.log(req.headers)
+    console.log(req.cookies)
     const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -59,7 +59,7 @@ app.get('/getme', (req, res) => {
   });
 
   app.get('/gotcha', (req, res) => {
-    console.log(req.headers)
+    console.log(req.cookies)
     res.send("hi") }
     )
 
