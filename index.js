@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
+const cookieParser = require('cookie-parser');
 const port = 3000
 
+
+app.use(cookieParser());
 
 app.get('/getme', (req, res) => {
     console.log(req.cookies)
