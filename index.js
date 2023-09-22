@@ -4,6 +4,7 @@ const port = 3000
 
 
 app.get('/getme', (req, res) => {
+    console.log(req.headers)
     const htmlContent = `
     <!DOCTYPE html>
     <html>
